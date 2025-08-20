@@ -1,0 +1,118 @@
+##############################################################################
+#  PULL REQUEST LAB  -  SUBMISSION FILE
+#
+#  1. Copy this file:    cp submission/outputs.template.txt submission/outputs.txt
+#  2. Do the tasks in ASSIGNMENT.md, in order.
+#  3. After each command, paste what the terminal printed UNDER the matching
+#     "--- N.M" line, replacing the line "(paste output here)".
+#  4. Do not edit or delete the "=== TASK" and "--- N.M" lines.
+#  5. Check your work at any time:    python3 tests/grade.py
+##############################################################################
+
+Name   :
+Reg No :
+
+
+=== TASK 1 : Connect and plan the work  (20 marks) ===
+
+--- 1.1  git push -u origin main ---
+(paste output here)
+
+--- 1.2  gh auth status ---
+(paste output here)
+
+--- 1.3  gh issue create ... "Add obstacle detection unit tests" ---
+(paste output here)
+
+--- 1.4  gh issue create ... "Update README installation section" ---
+(paste output here)
+
+--- 1.5  gh issue list ---
+(paste output here)
+
+# Q1 (type the answer on the ANSWER-1 line below): which word in a pull request description closes issue 2 when the pull request is merged? (one word, as the handout writes it)
+ANSWER-1 :
+
+
+=== TASK 2 : Open a pull request  (25 marks) ===
+
+--- 2.1  git commit -am "docs: add usage instructions to readme" ---
+(paste output here)
+
+--- 2.2  git push -u origin feature/readme-usage ---
+(paste output here)
+
+--- 2.3  gh pr create --base main --head feature/readme-usage ... ---
+(paste output here)
+
+--- 2.4  gh pr list ---
+(paste output here)
+
+--- 2.5  gh pr review feature/readme-usage --comment ... ---
+(paste output here)
+
+--- 2.6  git commit -am "docs: fix broken link in usage section" ---
+(paste output here)
+
+--- 2.7  git push ---
+(paste output here)
+
+--- 2.8  gh pr view feature/readme-usage ---
+(paste output here)
+
+
+=== TASK 3 : Three ways to merge  (25 marks) ===
+
+--- 3.1  gh pr merge feature/readme-usage --squash ---
+(paste output here)
+
+--- 3.2  gh pr merge fix/detector-threshold --merge ---
+(paste output here)
+
+--- 3.3  gh pr merge feature/creep-speed --rebase ---
+(paste output here)
+
+--- 3.4  git pull origin main ---
+(paste output here)
+
+--- 3.5  git log --oneline --graph -8 ---
+(paste output here)
+
+--- 3.6  git branch -d feature/readme-usage   then   git push origin --delete feature/readme-usage ---
+(paste output here)
+
+# Q2 (type the answer on the ANSWER-2 line below): which merge strategy leaves a merge commit with two parents? (merge, squash or rebase)
+ANSWER-2 :
+
+# Q3 (type the answer on the ANSWER-3 line below): how many commits did the squash and merge add to main, for a pull request that had two commits?
+ANSWER-3 :
+
+
+=== TASK 4 : The contributing guide and the closed issue  (15 marks) ===
+
+--- 4.1  gh issue list --state closed ---
+(paste output here)
+
+--- 4.2  git commit -m "docs: add contributing guide" ---
+(paste output here)
+
+--- 4.3  git push origin main ---
+(paste output here)
+
+--- 4.4  gh issue list ---
+(paste output here)
+
+
+=== TASK 5 : Protect main  (15 marks) ===
+
+--- 5.1  gh api -X PUT repos/{owner}/{repo}/branches/main/protection ... ---
+(paste output here)
+
+--- 5.2  git push origin main   (it is supposed to be rejected) ---
+(paste output here)
+
+--- 5.3  git reset --hard origin/main ---
+(paste output here)
+
+--- 5.4  git status ---
+(paste output here)
