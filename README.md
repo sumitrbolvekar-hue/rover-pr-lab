@@ -6,6 +6,6 @@ See [the installation notes](docs/install.md) to set up a laptop.
 
 ## Usage
 
-Install the requirements first (see [the install guide](docs/instal.md)), then run:
+Install the requirements first (see [the install guide](docs/install.md)), then run:
 
     python3 src/controller.py
